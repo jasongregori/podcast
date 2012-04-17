@@ -154,7 +154,7 @@ header .ribbon-inner {
 }
 
 header a.ribbon-inner:hover {
-  border-color: #7C3335;
+  border-color: #853654;
   text-decoration: none;
 }
 
@@ -192,7 +192,7 @@ header h1 {
 }
 
 header a.ribbon-inner:hover h1 {
-  background-color: #7C3335;
+  background-color: #853654;
 }
 
 header h2 {
@@ -205,7 +205,7 @@ header h2 {
 }
 
 header a.ribbon-inner:hover h2 {
-  background-color: #7C3335;
+  background-color: #853654;
 }
 
 section#downloads {
