@@ -536,6 +536,15 @@ dd p:first-child {
   padding-bottom: 10px
 }
 
+.header-level-1 a {
+  color: #7c334f;
+}
+
+.header-level-1 a:hover {
+  color: #417090;
+  text-decoration: none;
+}
+
 .header-level-2 {
   font-size: 1.58em;
   color: #7c334f;
