@@ -3,6 +3,8 @@
 {{ page.content }}
 
 <p>
+  {{ page.date | date: "%B %d, %Y" }}
+  &middot;
   <a href="#">iTunes</a>
   &middot;
   <a href="{{ page.url | append:'.m4a' }}">MP3</a>
