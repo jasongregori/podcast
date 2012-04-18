@@ -14,15 +14,15 @@
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</lastBuildDate>
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-    <webMaster>{{ site._email }}</webMaster>
+    <!-- <webMaster>{{ site._email }}</webMaster> -->
 
-    <author>{{ site._author }}</author>
+    <itunes:author>{{ site._author }}</itunes:author>
     <itunes:subtitle>{{ site._subtitle }}</itunes:subtitle>
     <itunes:summary></itunes:summary>
 
     <itunes:owner>
       <itunes:name>{{ site._author }}</itunes:name>
-      <itunes:email>{{ site._email }}</itunes:email>
+      <!-- <itunes:email>{{ site._email }}</itunes:email> -->
     </itunes:owner>
 
     <itunes:explicit>No</itunes:explicit>
@@ -36,8 +36,9 @@
     {% for page in site.posts %}
     <item>
       <title>#{{ page.title }}: {{ page.subtitle }}</title>
+      <author>{{ site._author }}</author>
       <link>{{ site._url}}{{ page.url }}</link>
-      <guid>{{ page.title }}</guid>
+      <guid>{{ site._url}}{{ page.url }}</guid>
       <description>{{ page.desc }}</description>
       <enclosure url="{{ site._url}}{{ page.url | append:'.m4a' }}" length="{{ page.bytes }}" type="audio/x-m4a"/>
       <pubDate>{{ page.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
