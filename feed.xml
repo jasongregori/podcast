@@ -1,0 +1,57 @@
+---
+
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+
+  <channel>
+
+    <title>{{ site._name }}</title>
+    <description>{{ site._subtitle }}</description>
+    <link>{{ site._url }}</link>
+    <language>en-us</language>
+    <copyright>&#xA9; {{ 'now' | date: "%Y" }} {{ site._author }}</copyright>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</lastBuildDate>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <webMaster>{{ site._email }}</webMaster>
+
+    <author>{{ site._author }}</author>
+    <itunes:subtitle>{{ site._subtitle }}</itunes:subtitle>
+    <itunes:summary></itunes:summary>
+
+    <itunes:owner>
+      <itunes:name>{{ site._author }}</itunes:name>
+      <itunes:email>{{ site._email }}</itunes:email>
+    </itunes:owner>
+
+    <itunes:explicit>No</itunes:explicit>
+
+    <!-- <itunes:image href="http://www.podcast411.com/img/411_itunes.jpg"/> -->
+
+    <!-- <itunes:category text="Technology">
+    <itunes:category text="Podcasting"/>
+    </itunes:category> -->
+
+    {% for page in site.posts %}
+    <item>
+      <title>#{{ page.title }}: {{ page.subtitle }}</title>
+      <link>{{ site._url}}{{ page.url }}</link>
+      <guid>{{ page.title }}</guid>
+      <description>{{ page.desc }}</description>
+      <enclosure url="{{ site._url}}{{ page.url | append:'.m4a' }}" length="{{ page.filesize }}" type="audio/x-m4a"/>
+      <category>Podcasts</category>
+      <pubDate>Sat, 25 Mar 2006 11:30:00 -0500</pubDate>
+
+      <itunes:author>{{ site._author }}</itunes:author>
+
+      <itunes:explicit>No</itunes:explicit>
+
+      <itunes:duration>{{ page.duration }}</itunes:duration>
+
+    </item>
+    {% endfor %}
+
+  </channel>
+
+</rss>
