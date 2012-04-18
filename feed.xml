@@ -36,7 +36,6 @@
     {% for page in site.posts %}
     <item>
       <title>#{{ page.title }}: {{ page.subtitle }}</title>
-      <author>{{ site._author }}</author>
       <link>{{ site._url}}{{ page.url }}</link>
       <guid>{{ site._url}}{{ page.url }}</guid>
       <description>{{ page.desc }}</description>
