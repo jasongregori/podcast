@@ -39,9 +39,8 @@
       <link>{{ site._url}}{{ page.url }}</link>
       <guid>{{ page.title }}</guid>
       <description>{{ page.desc }}</description>
-      <enclosure url="{{ site._url}}{{ page.url | append:'.m4a' }}" length="{{ page.filesize }}" type="audio/x-m4a"/>
-      <category>Podcasts</category>
-      <pubDate>Sat, 25 Mar 2006 11:30:00 -0500</pubDate>
+      <enclosure url="{{ site._url}}{{ page.url | append:'.m4a' }}" length="{{ page.bytes }}" type="audio/x-m4a"/>
+      <pubDate>{{ page.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
 
       <itunes:author>{{ site._author }}</itunes:author>
 
