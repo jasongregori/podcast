@@ -46,7 +46,7 @@
 
       <itunes:explicit>No</itunes:explicit>
 
-      <itunes:duration>{{ page.duration }}</itunes:duration>
+      <itunes:duration>{{ page.seconds }}</itunes:duration>
 
     </item>
     {% endfor %}

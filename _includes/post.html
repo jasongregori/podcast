@@ -5,9 +5,19 @@
 {{ page.content }}
 
 <p>
-  <a href="#">iTunes</a>
-  &middot;
-  <a href="{{ site._basepath | append: page.url | append:'.m4a' }}">MP3</a>
-  &middot;
-  <a href="{{ site._basepath | append: page.url }}">{{ page.date | date: "%B %d, %Y" }}</a>
+  <a href="{{ site._basepath | append: page.url }}">
+    {{ page.date | date: "%B %d, %Y" }}
+  </a>
+
+  <br/>
+  
+    <a href="#">iTunes</a>
+    &middot;
+    <a href="{{ site._basepath | append: page.url | append:'.m4a' }}">
+      MP3
+    </a>
+    &middot;
+    {{ page.seconds | divided_by: 60 }} minutes
+    <!-- &middot;
+    {{ page.bytes | divided_by: 1000000 }} MB -->
 </p>
