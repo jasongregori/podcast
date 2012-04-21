@@ -319,17 +319,18 @@ footer span.ribbon-inner p {
   color: #e69b95;
   font: bold italic 12px/1 Georgia, Times, “Times New Roman”, serif;
   padding-bottom:4px;
+  padding-top:3px;
 }
 
 footer span.ribbon-inner a {
-  position: relative;
-  bottom: -1px;
   color: #7eb0d2;
-  font-family: 'Open Sans', Myriad, Calibri, sans-serif;
-  text-transform: uppercase;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 1.2em;
+/*  position: relative;
+    bottom: -1px;
+    font-family: 'Open Sans', Myriad, Calibri, sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.2em;*/
 }
 
 footer span.ribbon-inner a:hover {
