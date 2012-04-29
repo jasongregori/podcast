@@ -1,5 +1,6 @@
 auto: --auto
 permalink: /:categories/:title
+exclude: [ notes ]
 
 _author: John Crandall &amp; Jason Gregori
 _basepath: /john-and-jasons-podcast
