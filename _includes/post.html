@@ -1,8 +1,6 @@
 <h3>#{{ page.title }}: {{ page.subtitle }}</h3>
 
-<p>{{ page.desc }}</p>
-
-{{ page.content }}
+{% include post_content.html %}
 
 <p>
   <a href="{{ site._basepath | append: page.url }}">
@@ -13,7 +11,7 @@
   
     <a href="#">iTunes</a>
     &middot;
-    <a href="{{ site._basepath | append: page.url | append:'.m4a' }}">
+    <a href="{{ site._basepath | append: page.url | append:'.mp3' }}">
       MP3
     </a>
     &middot;

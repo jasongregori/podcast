@@ -1,5 +1,5 @@
 ---
-
+keywords: "jason gregori, john crandall"
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/" xmlns:atom="http://www.w3.org/2005/Atom/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
@@ -14,12 +14,12 @@
     
     <itunes:subtitle>{{ site._name }}</itunes:subtitle>
     <itunes:author>{{ site._author }}</itunes:author>
-    <itunes:summary></itunes:summary>
-
-    <itunes:owner>
+    <itunes:summary>{{ site._description_itunes }}</itunes:summary>
+    <itunes:keywords>{{ keywords }}</itunes:keywords>
+    <!-- <itunes:owner>
       <itunes:name>{{ site._author }}</itunes:name>
-      <!-- <itunes:email>{{ site._email }}</itunes:email> -->
-    </itunes:owner>
+      <itunes:email>{{ site._email }}</itunes:email>
+    </itunes:owner> -->
 
     <itunes:explicit>No</itunes:explicit>
 
@@ -31,18 +31,18 @@
 
     {% for page in site.posts %}
     <item>
-      <title>#{{ page.title }}: {{ page.subtitle }}</title>
-      <link>{{ site._url}}{{ page.url }}</link>
-      <guid>{{ site._url}}{{ page.url }}</guid>
-      <description>{{ page.desc }}</description>
-      <enclosure url="{{ site._url}}{{ page.url | append:'.m4a' }}" length="{{ page.bytes }}" type="audio/x-m4a"/>
+      <title>{{ site._name }} #{{ page.title }}: {{ page.subtitle }}</title>
+      <link>{{ site._url }}{{ page.url }}</link>
+      <guid>{{ site._url }}{{ page.url }}</guid>
       <pubDate>{{ page.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
-
-      <itunes:author>{{ site._author }}</itunes:author>
-
-      <itunes:explicit>No</itunes:explicit>
+      <author>{{ site._author }}</author>
+      <description>{{ page.desc }}</description>
+      <enclosure url="{{ site._url}}{{ page.url | append:'.mp3' }}" length="{{ page.bytes }}" type="audio/mpeg"/>
+      <content:encoded>{% include post_content.html %}</content:encoded>
 
       <itunes:duration>{{ page.seconds }}</itunes:duration>
+      <itunes:subtitle>{{ page.desc }}</itunes:subtitle>
+      <itunes:keywords>{{ keywords }}</itunes:keywords>
 
     </item>
     {% endfor %}
