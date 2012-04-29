@@ -29,7 +29,7 @@ keywords: jason gregori, john crandall
 
     {% for post in site.posts %}
     <item>
-      <title>{{ site._name }} #{{ post.title }}: {{ post.subtitle }}</title>
+      <title>#{{ post.title }}: {{ post.subtitle }}</title>
       <link>{{ site._url }}{{ post.url }}</link>
       <guid>{{ site._url }}{{ post.url }}</guid>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
