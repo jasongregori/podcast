@@ -25,9 +25,7 @@ keywords: jason gregori, john crandall
 
     <!-- <itunes:image href="http://www.podcast411.com/img/411_itunes.jpg"/> -->
 
-    <!-- <itunes:category text="Technology">
-    <itunes:category text="Podcasting"/>
-    </itunes:category> -->
+    <itunes:category text="Comedy"></itunes:category>
 
     {% for post in site.posts %}
     <item>
