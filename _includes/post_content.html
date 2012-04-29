@@ -1,3 +1,12 @@
 <p>{{ page.desc }}</p>
 
 {{ page.content }}
+
+{% if page.links %}
+<p>Links:</p>
+<ul>
+  {% for link in page.links %}
+    <li><a href="{{ link.l }}">{{ link.n }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
