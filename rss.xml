@@ -15,7 +15,7 @@ keywords: jason gregori, john crandall
     <itunes:subtitle>{{ site._name }}</itunes:subtitle>
     <itunes:author>{{ site._author }}</itunes:author>
     <itunes:summary>{{ site._description_itunes }}</itunes:summary>
-    <itunes:keywords>{{ keywords }}</itunes:keywords>
+    <itunes:keywords>{{ page.keywords }}</itunes:keywords>
     <!-- <itunes:owner>
       <itunes:name>{{ site._author }}</itunes:name>
       <itunes:email>{{ site._email }}</itunes:email>
@@ -42,7 +42,7 @@ keywords: jason gregori, john crandall
 
       <itunes:duration>{{ post.seconds }}</itunes:duration>
       <itunes:subtitle>{{ post.desc }}</itunes:subtitle>
-      <itunes:keywords>{{ keywords }}</itunes:keywords>
+      <itunes:keywords>{{ page.keywords }}</itunes:keywords>
 
     </item>
     {% endfor %}
