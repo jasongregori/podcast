@@ -1,11 +1,11 @@
-<p>{{ page.desc }}</p>
+<p>{{ post.desc }}</p>
 
-{{ page.content }}
+{{ post.content }}
 
-{% if page.links %}
+{% if post.links %}
 <p>Links:</p>
 <ul>
-  {% for link in page.links %}
+  {% for link in post.links %}
     <li><a href="{{ link.l }}">{{ link.n }}</a></li>
   {% endfor %}
 </ul>

@@ -1,21 +1,21 @@
-<h3>#{{ page.title }}: {{ page.subtitle }}</h3>
+<h3>#{{ post.title }}: {{ post.subtitle }}</h3>
 
 {% include post_content.html %}
 
 <p>
-  <a href="{{ site._basepath | append: page.url }}">
-    {{ page.date | date: "%B %d, %Y" }}
+  <a href="{{ site._basepath | append: post.url }}">
+    {{ post.date | date: "%B %d, %Y" }}
   </a>
 
   <br/>
   
     <a href="#">iTunes</a>
     &middot;
-    <a href="{{ site._basepath | append: page.url | append:'.mp3' }}">
+    <a href="{{ site._basepath | append: post.url | append:'.mp3' }}">
       MP3
     </a>
     &middot;
-    {{ page.seconds | divided_by: 60 }} minutes
+    {{ post.seconds | divided_by: 60 }} minutes
     <!-- &middot;
-    {{ page.bytes | divided_by: 1000000 }} MB -->
+    {{ post.bytes | divided_by: 1000000 }} MB -->
 </p>
