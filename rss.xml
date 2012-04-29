@@ -36,7 +36,10 @@ keywords: jason gregori, john crandall
       <author>{{ site._author }}</author>
       <description>{{ post.desc }}</description>
       <enclosure url="{{ site._url}}{{ post.url | append:'.mp3' }}" length="{{ post.bytes }}" type="audio/mpeg"/>
-      <content:encoded>{% include post_content.html %}</content:encoded>
+      <content:encoded>
+        {% capture content %}{% include post_content.html %}{% endcapture %}
+        {{ content | xml_escape }}
+      </content:encoded>
 
       <itunes:duration>{{ post.seconds }}</itunes:duration>
       <itunes:subtitle>{{ post.desc }}</itunes:subtitle>
