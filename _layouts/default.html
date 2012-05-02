@@ -33,7 +33,18 @@
         <span class="ribbon-outer">
           <a href="{{ site._basepath }}" class="ribbon-inner">
             <h1>{{ site._name }}</h1>
-            <h2>{{ site._description_web }}</h2>
+            <h2>
+              {% comment %} get a random number then add page.title then subtract size until it fits {% endcomment %}
+              {% capture random_index %}{{ 'now' | date: '%S' | times: site._taglines.size | divided_by: 60 | plus: page.title }}{% endcapture %}
+              {% capture mod_count %}{{ random_index | minus: site._taglines.size | divided_by: site._taglines.size }}{% endcapture %}
+              {% for i in (0..mod_count) %}
+                {% capture random_index %}{{ random_index | minus: site._taglines.size }}{% endcapture %}
+              {% endfor %}
+
+              {% for tagline in site._taglines offset:random_index limit:1 %}
+                {{ tagline }}
+              {% endfor %}
+            </h2>
           </a>
           <span class="left-tail"></span>
           <span class="right-tail"></span>
