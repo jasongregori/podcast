@@ -1,6 +1,6 @@
 auto: --auto
 permalink: /:categories/:title
-exclude: [ notes ]
+exclude: [ notes, CNAME ]
 
 _author: John Crandall &amp; Jason Gregori
 _basepath: ""
