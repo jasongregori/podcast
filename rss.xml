@@ -16,10 +16,10 @@
     <itunes:author>{{ site._author }}</itunes:author>
     <itunes:summary>{{ site._description_itunes }}</itunes:summary>
     <itunes:keywords>{{ site._keywords }}</itunes:keywords>
-    <!-- <itunes:owner>
+    <itunes:owner>
       <itunes:name>{{ site._author }}</itunes:name>
       <itunes:email>{{ site._email }}</itunes:email>
-    </itunes:owner> -->
+    </itunes:owner>
 
     <itunes:explicit>No</itunes:explicit>
 
