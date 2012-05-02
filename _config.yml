@@ -3,12 +3,12 @@ permalink: /:categories/:title
 exclude: [ notes ]
 
 _author: John Crandall &amp; Jason Gregori
-_basepath: /podcast
+_basepath: ""
 _keywords: jason gregori, john crandall
 _name: The Weekly Once-a-Week
 _email: weeklyonceaweek@gmail.com
 _description_itunes: A podcast hosted by John Crandall &amp; Jason Gregori
-_url: http://jasongregori.github.com/podcast
+_url: http://weeklyonceaweek.com
 _taglines:
   - Jason and John beat each other up ... with friendship
   - Your going back in time ... to the future!
