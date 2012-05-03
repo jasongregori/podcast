@@ -18,8 +18,8 @@
       })
     </script>
     <title>
-      {% if post.title %}
-        {{ site._name }}: Episode #{{ post.title }}
+      {% if page.title %}
+        {{ site._name }} #{{ page.title }}: {{ page.subtitle }}
       {% else %}
         {{ site._name }}
       {% endif %}
