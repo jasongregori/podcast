@@ -23,7 +23,7 @@
 
     <itunes:explicit>No</itunes:explicit>
 
-    <!-- <itunes:image href="http://www.podcast411.com/img/411_itunes.jpg"/> -->
+    <itunes:image href="{{ site._url }}/static/images/logo.jpg"/>
 
     <itunes:category text="Comedy"></itunes:category>
 
