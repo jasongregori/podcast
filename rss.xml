@@ -41,6 +41,7 @@
         {{ content | xml_escape }}
       </content:encoded>
 
+      <itunes:image href="{{ site._url }}/static/images/logo.jpg"/>
       <itunes:duration>{{ post.seconds }}</itunes:duration>
       <itunes:subtitle>{{ post.desc }}</itunes:subtitle>
       <itunes:keywords>{{ site._keywords }}</itunes:keywords>
