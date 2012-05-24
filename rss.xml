@@ -29,12 +29,12 @@
 
     {% for post in site.posts %}
     <item>
-      <title>#{{ post.title }}: {{ post.subtitle }}</title>
+      <title>#{{ post.title }}: {{ post.subtitle | xml_escape }}</title>
       <link>{{ site._url }}{{ post.url }}</link>
       <guid>{{ site._url }}{{ post.url }}</guid>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
       <author>{{ site._author }}</author>
-      <description>{{ post.desc }}</description>
+      <description>{{ post.desc | xml_escape }}</description>
       <enclosure url="{{ site._url}}{{ post.url | append:'.mp3' }}" length="{{ post.bytes }}" type="audio/mpeg"/>
       <content:encoded>
         {% capture content %}{% include post_content.html %}{% endcapture %}
@@ -43,7 +43,7 @@
 
       <itunes:image href="{{ site._url }}/static/images/logo.jpg"/>
       <itunes:duration>{{ post.seconds }}</itunes:duration>
-      <itunes:subtitle>{{ post.desc }}</itunes:subtitle>
+      <itunes:subtitle>{{ post.desc | xml_escape }}</itunes:subtitle>
       <itunes:keywords>{{ site._keywords }}</itunes:keywords>
 
     </item>
