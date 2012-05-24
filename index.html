@@ -3,5 +3,6 @@ layout: default
 ---
 
 {% for post in site.posts %}
+  {% assign body = post.content %}
   {% include post.html %}
 {% endfor %}
