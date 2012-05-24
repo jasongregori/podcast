@@ -1,12 +1,18 @@
-<p>{{ post.desc }}</p>
+{% capture post_content %}
 
 {{ post.content }}
+{{ post.desc }}
+
 
 {% if post.links %}
-<p>Links:</p>
-<ul>
-  {% for link in post.links %}
-    <li><a href="{{ link.l }}">{{ link.n }}</a></li>
-  {% endfor %}
-</ul>
+
+Links:
+
+{% for link in post.links %}- [{{ link.n }}]({{ link.l }})
+{% endfor %}
+
 {% endif %}
+
+{% endcapture %}
+
+{{ post_content | markdownify }}
