@@ -13,6 +13,17 @@ Links:
 
 {% endif %}
 
+{% assign clips = site.tags[post.title] %}
+
+{% if clips.size > 0 %}
+
+Clips:
+
+{% for clip in clips %}
+- [{{ clip.title | remove_first: post.title }}]({{ site._basepath | append: clip.url | append:'.mp3' }}){% endfor %}
+
+{% endif %}
+
 {% endcapture %}
 
 {{ post_content | markdownify }}
