@@ -28,25 +28,27 @@
     <itunes:category text="Comedy"></itunes:category>
 
     {% for post in site.posts %}
-    <item>
-      <title>#{{ post.title }}: {{ post.subtitle | xml_escape }}</title>
-      <link>{{ site._url }}{{ post.url }}</link>
-      <guid>{{ site._url }}{{ post.url }}</guid>
-      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
-      <author>{{ site._author }}</author>
-      <description>{{ post.desc | xml_escape }}</description>
-      <enclosure url="{{ site._url}}{{ post.url | append:'.mp3' }}" length="{{ post.bytes }}" type="audio/mpeg"/>
-      <content:encoded>
-        {% capture content %}{% include post_content.html %}{% endcapture %}
-        {{ content | xml_escape }}
-      </content:encoded>
+      {% if post.categories contains "episodes" %}
+      <item>
+        <title>#{{ post.title }}: {{ post.subtitle | xml_escape }}</title>
+        <link>{{ site._url }}{{ post.url }}</link>
+        <guid>{{ site._url }}{{ post.url }}</guid>
+        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
+        <author>{{ site._author }}</author>
+        <description>{{ post.desc | xml_escape }}</description>
+        <enclosure url="{{ site._url}}{{ post.url | append:'.mp3' }}" length="{{ post.bytes }}" type="audio/mpeg"/>
+        <content:encoded>
+          {% capture content %}{% include post_content.html %}{% endcapture %}
+          {{ content | xml_escape }}
+        </content:encoded>
 
-      <itunes:image href="{{ site._url }}/static/images/logo.jpg"/>
-      <itunes:duration>{{ post.seconds }}</itunes:duration>
-      <itunes:subtitle>{{ post.desc | xml_escape }}</itunes:subtitle>
-      <itunes:keywords>{{ site._keywords }}</itunes:keywords>
+        <itunes:image href="{{ site._url }}/static/images/logo.jpg"/>
+        <itunes:duration>{{ post.seconds }}</itunes:duration>
+        <itunes:subtitle>{{ post.desc | xml_escape }}</itunes:subtitle>
+        <itunes:keywords>{{ site._keywords }}</itunes:keywords>
 
-    </item>
+      </item>
+      {% endif %}
     {% endfor %}
 
   </channel>

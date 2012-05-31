@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% for post in site.posts %}
+{% for post in site.categories.episodes %}
   {% assign body = post.content %}
   {% include post.html %}
 {% endfor %}
