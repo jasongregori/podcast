@@ -56,12 +56,10 @@
         <guid>{{ site._url | append: post.url | append:'.mp3' }}</guid>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
         <author>{{ site._author }}</author>
-        <description>{{ post.title | remove_first: post.tags.first | remove_first: ' ' | xml_escape }}</description>
         <enclosure url="{{ site._url | append: post.url | append:'.mp3' }}" length="{{ post.bytes }}" type="audio/mpeg"/>
 
         <itunes:image href="{{ site._url }}/static/images/logo.jpg"/>
         <itunes:duration>{{ post.seconds }}</itunes:duration>
-        <itunes:subtitle>{{ post.title | remove_first: post.tags.first | xml_escape }}</itunes:subtitle>
         <itunes:keywords>{{ site._keywords }}</itunes:keywords>
 
       </item>
