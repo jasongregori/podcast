@@ -1,4 +1,4 @@
-<h3>#{{ post.title }}: {{ post.subtitle }}</h3>
+<h3><a href="{{ site._basepath | append: post.url }}">#{{ post.title }}: {{ post.subtitle }}</a></h3>
 
 {% include post_content.html %}
 
