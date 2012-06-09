@@ -51,7 +51,7 @@
       {% endif %}
       {% if post.categories contains "clips" %}
       <item>
-        <title>Clip:{{ post.title | remove_first: post.tags.first | xml_escape }}</title>
+        <title>– Clip:{{ post.title | remove_first: post.tags.first | xml_escape }}</title>
         <link>{{ site._url | append: post.url | append:'.mp3' }}</link>
         <guid>{{ site._url | append: post.url | append:'.mp3' }}</guid>
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
