@@ -1,4 +1,3 @@
-auto: --auto
 permalink: /:categories/:title
 exclude: [ notes, CNAME ]
 
@@ -12,8 +11,6 @@ _description_itunes: A podcast hosted by John Crandall &amp; Jason Gregori
 _description_website: A podcast hosted by John Crandall &amp; Jason Gregori
 _url: http://weeklyonceaweek.com
 _taglines:
-  - Jason and John beat each other up ... with friendship
-  - You're going back in time ... to the future!
-  - Jason, John, and the website they done built.
+  - There hasn't been an episode in 9 months
   - Nerdburgers!
   - It's moderately amusing!
